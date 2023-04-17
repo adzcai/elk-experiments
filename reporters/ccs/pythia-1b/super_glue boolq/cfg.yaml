@@ -1,0 +1,47 @@
+concatenated_layer_offset: 0
+data:
+  layers: []
+  model: EleutherAI/pythia-1b
+  prompts:
+    data_dirs: []
+    datasets:
+    - super_glue boolq
+    label_columns: []
+    max_examples:
+    - 750
+    - 250
+    num_classes: 0
+    num_shots: 0
+    num_variants: -1
+    seed: 42
+    stream: false
+  token_loc: last
+debug: false
+min_gpu_mem: null
+net:
+  activation: gelu
+  bias: true
+  hidden_size: null
+  init: default
+  loss:
+  - 1.0*ccs
+  loss_dict:
+    ccs: 1.0
+  lr: 0.01
+  num_epochs: 1000
+  num_layers: 1
+  num_tries: 10
+  optimizer: lbfgs
+  pre_ln: false
+  seed: 42
+  supervised_weight: 0.0
+  weight_decay: 0.01
+num_gpus: -1
+optim:
+  lr: 0.01
+  num_epochs: 1000
+  num_tries: 10
+  optimizer: lbfgs
+  weight_decay: 0.01
+out_dir: null
+supervised: single
